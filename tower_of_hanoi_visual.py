@@ -182,7 +182,7 @@ class HanoiVisualizer(tk.Tk):
         self.moves_text.config(state="normal")
         self.moves_text.delete("1.0", tk.END)
         for i, (a,b) in enumerate(self.move_sequence, start=1):
-            self.moves_text.insert(tk.END, f"{i}: {a}->{b}\n")
+            self.moves_text.insert(tk.END, f"{i}: {a+1}->{b+1}\n")
         self.moves_text.config(state="disabled")
 
     def _schedule_next_move(self):
@@ -271,3 +271,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
